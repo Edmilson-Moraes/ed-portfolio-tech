@@ -1,15 +1,32 @@
-# Sistema de Login com limite tentativas (3)
-senha_correta = '1234'          # ← variável simples (string)
-tentativas = 0                  # ← variável inteira que conta erros
+# Sistema de Login Militar - Versão 2
+# Implementação de dicionário para usuários e senhas
 
-while tentativas < 3:           # ← loop enquanto tentativas for menor que 3
-    senha = input("Digite a senha:")   # ← pede a senha do usuário
-    if senha == senha_correta:         # ← compara se acertou
-        print("\nSenha correta.")
-        print("\nBem vindo!")
-        break                          # ← sai do loop imediatamente
+user_pass = {
+
+    "edmilson" : "fuzileiro123",
+    "leidiane" : "amoramoramor",
+    "manuela" : "catimbau",
+}
+
+tentativas = 0      # contador de tentativas
+max_tentativas = 3  # n° máx de tentativas
+
+while tentativas < 3:
+    usuario = input("Digite seu usuário: ")
+    senha = input("Digite sua senha: ")
+
+# Verifica se o usuário existe NO dicionário E se a senha bate
+    if usuario in user_pass and user_pass[usuario] == senha:
+        print(f"\nAcesso liberado! Bem-vindo, {usuario.capitalize()}!") 
+        break # sai do loop
+
     else:
-        print("\nSenha incorreta, tenta novamente!\n")
-    tentativas += 1                    # ← aumenta o contador de erro
-    if tentativas == 3:                # ← só depois de 3 erros mostra mensagem final
-        print("\nfim das tentativas. Sistema bloqueado!")
+        tentativas +=1
+        restantes = max_tentativas - tentativas
+        print(f"\nCredenciais erradas. Tentativas restantes: {restantes}")
+
+# Fora do loop: só chega aqui se estogar as tentativas
+
+if tentativas == max_tentativas:
+    print("\n!!!ACESSO NEGADO!!!")
+    print("\nMáximo de tentativas atingido.")
