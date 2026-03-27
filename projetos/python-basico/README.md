@@ -12,7 +12,7 @@ Simulação de autenticação com limite de tentativas.
 - login_quartel.py -> lógica principa
 - ADR-001.md -> decisão técnica
  
-# Próximos passos
+## Próximos passos
 - melhorar validação
 - separar entrada/ saída
 - evoluir para API
