@@ -12,7 +12,7 @@ tentativas = 0      # contador de tentativas
 max_tentativas = 3  # n° máx de tentativas
 
 while tentativas < 3:
-    usuario = input("Digite seu usuário: ")
+    usuario = input("Digite seu usuário: ").lower().strip()
     senha = input("Digite sua senha: ")
 
 # Verifica se o usuário existe NO dicionário E se a senha bate
