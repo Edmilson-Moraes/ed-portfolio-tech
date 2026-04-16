@@ -1,16 +1,19 @@
-# Edmilson – Engenharia de Software
+# Edmilson Moraes - Software Engineering Portfolio
 
 ## Objetivo
-Construir sistemas reais com foco em:
-- arquitetura
-- sistemas distribuídos
-- observabilidade
+Construir sistemas backend escaláveis com foco em mercado internacional.
+
+## Stack em evolução
+- Python → Go
+- Backend / APIs
+- Cloud (AWS - em progresso)
+- DevOps (Docker - em progresso)
 
 ## Projetos
-- python-basico
-- sistema-pedidos (em construção)
+- shopping-list-cli → fundamentos de lógica e CLI
+- (próximos projetos mais avançados aqui)
 
-## Métricas (futuro)
-- latência
-- throughput
-- falhas
+## Roadmap
+- APIs REST
+- Microsserviços
+- Deploy em cloud
